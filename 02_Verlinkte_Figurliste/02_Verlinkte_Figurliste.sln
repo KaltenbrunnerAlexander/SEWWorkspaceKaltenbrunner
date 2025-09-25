@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36121.58 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_Verlinkte_Figurliste", "02_Verlinkte_Figurliste\02_Verlinkte_Figurliste.csproj", "{3E7E9250-8398-4A9C-851D-61EE5BE07F0D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E7E9250-8398-4A9C-851D-61EE5BE07F0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E7E9250-8398-4A9C-851D-61EE5BE07F0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E7E9250-8398-4A9C-851D-61EE5BE07F0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E7E9250-8398-4A9C-851D-61EE5BE07F0D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B61A9275-A9B3-4370-A432-496D8C9CFE76}
+	EndGlobalSection
+EndGlobal
