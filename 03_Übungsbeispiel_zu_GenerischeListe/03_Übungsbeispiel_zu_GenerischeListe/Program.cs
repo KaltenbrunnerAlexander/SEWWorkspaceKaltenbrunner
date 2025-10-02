@@ -108,7 +108,7 @@ namespace _03_Übungsbeispiel_zu_GenerischeListe
             }
         }
     }
-        class ListEntry
+    class ListEntry
     {
         public ListEntry next;
         public object data;
