@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36121.58 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06_PersonenFiltern", "06_PersonenFiltern\06_PersonenFiltern.csproj", "{A056A358-58A3-43DB-8D6C-EF2E312E2FC2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A056A358-58A3-43DB-8D6C-EF2E312E2FC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A056A358-58A3-43DB-8D6C-EF2E312E2FC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A056A358-58A3-43DB-8D6C-EF2E312E2FC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A056A358-58A3-43DB-8D6C-EF2E312E2FC2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A5EB786A-0890-4B3B-9DF5-91B78048406C}
+	EndGlobalSection
+EndGlobal
