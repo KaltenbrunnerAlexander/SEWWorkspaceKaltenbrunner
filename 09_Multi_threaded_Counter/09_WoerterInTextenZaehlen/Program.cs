@@ -46,7 +46,7 @@ namespace _09_WoerterInTextenZaehlen
                     string pageContent = client.GetStringAsync(url).Result;
                     int count = CountWordOccurrences(pageContent, word);
                     Console.WriteLine($"URL: {url} - Vorkommen von '{word}': {count}");
-                    totalCount += count;
+                    totalCount = totalCount + count;
                 }
             }
 
@@ -63,7 +63,7 @@ namespace _09_WoerterInTextenZaehlen
             while ((index = text.IndexOf(word, index, StringComparison.OrdinalIgnoreCase)) != -1)
             {
                 count++;
-                index += word.Length;
+                index = index + word.Length;
             }
 
             return count;
