@@ -1,0 +1,28 @@
+﻿<Window x:Class="PrimeNumbersWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PrimeNumbersWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Canvas>
+        <Button Click="Button_Click" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="30" Canvas.Top="14">Start</Button>
+        <Button Canvas.Left="30" Canvas.Top="14" HorizontalAlignment="Left" VerticalAlignment="Center" Height="20" Width="30">Stop</Button>
+        <Window x:Class="PrimeNumbersWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PrimeNumbersWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Canvas>
+                <Button Canvas.Left="30" Canvas.Top="14" Height="20" Width="30" Click="Button_Stop_Click">Stop</Button>
+                <Button Canvas.Left="30" Canvas.Top="14" HorizontalAlignment="Left" VerticalAlignment="Center" Height="20" Width="30">Stop</Button>
+        <Label Content="lbl_PrimeNumber"></Label>
+    </Canvas>
+</Window>
+
+    </Canvas>
+</Window>
