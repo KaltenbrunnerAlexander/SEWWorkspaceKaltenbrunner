@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36804.6 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14_SynchronizationContext", "14_SynchronizationContext\14_SynchronizationContext.csproj", "{AD84C6D3-8DD2-481B-B745-ED045E3C56B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfSynchronizationContext", "WpfSynchronizationContext\WpfSynchronizationContext.csproj", "{307269C2-FD81-40CD-9B72-5216AA2C0A0D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD84C6D3-8DD2-481B-B745-ED045E3C56B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD84C6D3-8DD2-481B-B745-ED045E3C56B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD84C6D3-8DD2-481B-B745-ED045E3C56B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD84C6D3-8DD2-481B-B745-ED045E3C56B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{307269C2-FD81-40CD-9B72-5216AA2C0A0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{307269C2-FD81-40CD-9B72-5216AA2C0A0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{307269C2-FD81-40CD-9B72-5216AA2C0A0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{307269C2-FD81-40CD-9B72-5216AA2C0A0D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6DDB77C0-2A25-4A69-A142-EC79000C30C7}
+	EndGlobalSection
+EndGlobal

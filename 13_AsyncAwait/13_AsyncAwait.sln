@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36121.58 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13_AsyncAwait", "13_AsyncAwait\13_AsyncAwait.csproj", "{81871050-1B2D-4DDD-B3E9-267B40801289}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebsiteDownloader", "WebsiteDownloader\WebsiteDownloader.csproj", "{32118952-A0C6-4EBA-B89C-E2AB079FAF0B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{81871050-1B2D-4DDD-B3E9-267B40801289}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81871050-1B2D-4DDD-B3E9-267B40801289}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81871050-1B2D-4DDD-B3E9-267B40801289}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81871050-1B2D-4DDD-B3E9-267B40801289}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32118952-A0C6-4EBA-B89C-E2AB079FAF0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32118952-A0C6-4EBA-B89C-E2AB079FAF0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32118952-A0C6-4EBA-B89C-E2AB079FAF0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32118952-A0C6-4EBA-B89C-E2AB079FAF0B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A08E5E8C-33D3-4FC6-BAC0-0A2777CD613D}
+	EndGlobalSection
+EndGlobal
