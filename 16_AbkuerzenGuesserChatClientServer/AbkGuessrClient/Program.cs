@@ -12,38 +12,36 @@ namespace AbkGuessrClient
     {
         static async Task Main()
         {
-            try
+            while (true)
             {
                 Console.Write("Abkürzung eingeben: ");
                 string eingabe = Console.ReadLine();
 
-                if (string.IsNullOrWhiteSpace(eingabe))
+                if (!string.IsNullOrWhiteSpace(eingabe))
                 {
-                    Console.WriteLine("Keine Eingabe!");
-                    Console.ReadLine();
-                    return;
+                    TcpClient client = new TcpClient();
+                    await client.ConnectAsync("127.0.0.1", 5000);
+
+                    NetworkStream stream = client.GetStream();
+                    byte[] data = Encoding.UTF8.GetBytes(eingabe);
+                    await stream.WriteAsync(data, 0, data.Length);
+
+                    client.Close();
+                    Console.WriteLine("Abfrage gesendet");
+                }
+                else
+                {
+                    Console.WriteLine("Keine Eingabe");
                 }
 
-                TcpClient client = new TcpClient();
-                await client.ConnectAsync("127.0.0.1", 5000);
+                Console.Write("Weitere Abkürzung eingeben? (j/n): ");
+                string weiter = Console.ReadLine();
 
-                NetworkStream stream = client.GetStream();
-                byte[] data = Encoding.UTF8.GetBytes(eingabe);
-                await stream.WriteAsync(data, 0, data.Length);
-
-                byte[] buffer = new byte[1024];
-                int bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length);
-
-                string antwort = Encoding.UTF8.GetString(buffer, 0, bytesRead);
-                Console.WriteLine("Server: " + antwort);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("CLIENT FEHLER:");
-                Console.WriteLine(ex.Message);
+                if (weiter.ToLower() != "j")
+                    break;
             }
 
-            Console.WriteLine("Drücke ENTER zum Beenden");
+            Console.WriteLine("Client beendet. ENTER drücken.");
             Console.ReadLine();
         }
     }

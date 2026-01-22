@@ -44,14 +44,14 @@ namespace AbkGuessrServer
                 int bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length);
                 string abkuerzung = Encoding.UTF8.GetString(buffer, 0, bytesRead).Trim();
 
-                string antwort;
                 if (dictionary.ContainsKey(abkuerzung))
-                    antwort = dictionary[abkuerzung];
+                {
+                    Console.WriteLine(dictionary[abkuerzung]);
+                }
                 else
-                    antwort = "Abkürzung nicht gefunden";
-
-                byte[] response = Encoding.UTF8.GetBytes(antwort);
-                await stream.WriteAsync(response, 0, response.Length);
+                {
+                    Console.WriteLine("Abkürzung nicht gefunden");
+                }
             }
         }
     }
