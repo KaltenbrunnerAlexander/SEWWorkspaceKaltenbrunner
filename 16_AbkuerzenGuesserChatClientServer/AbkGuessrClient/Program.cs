@@ -12,15 +12,39 @@ namespace AbkGuessrClient
     {
         static async Task Main()
         {
-            TcpClient client = new TcpClient();
-            await client.ConnectAsync("127.0.0.1", 5000);
+            try
+            {
+                Console.Write("Abkürzung eingeben: ");
+                string eingabe = Console.ReadLine();
 
-            NetworkStream stream = client.GetStream();
-            byte[] data = Encoding.UTF8.GetBytes("ca");
+                if (string.IsNullOrWhiteSpace(eingabe))
+                {
+                    Console.WriteLine("Keine Eingabe!");
+                    Console.ReadLine();
+                    return;
+                }
 
-            await stream.WriteAsync(data, 0, data.Length);
+                TcpClient client = new TcpClient();
+                await client.ConnectAsync("127.0.0.1", 5000);
 
-            client.Close();
+                NetworkStream stream = client.GetStream();
+                byte[] data = Encoding.UTF8.GetBytes(eingabe);
+                await stream.WriteAsync(data, 0, data.Length);
+
+                byte[] buffer = new byte[1024];
+                int bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length);
+
+                string antwort = Encoding.UTF8.GetString(buffer, 0, bytesRead);
+                Console.WriteLine("Server: " + antwort);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("CLIENT FEHLER:");
+                Console.WriteLine(ex.Message);
+            }
+
+            Console.WriteLine("Drücke ENTER zum Beenden");
+            Console.ReadLine();
         }
     }
 }

@@ -14,19 +14,15 @@ namespace AbkGuessrServer
 
         static async Task Main()
         {
-            // Textdatei einlesen
             dictionary = new Dictionary<string, string>();
 
             foreach (string line in File.ReadAllLines("abkuerzungen.txt"))
             {
                 string[] parts = line.Split('=');
                 if (parts.Length == 2)
-                {
                     dictionary[parts[0]] = parts[1];
-                }
             }
 
-            // Server starten
             TcpListener listener = new TcpListener(IPAddress.Loopback, 5000);
             listener.Start();
             Console.WriteLine("Server läuft...");
@@ -48,14 +44,14 @@ namespace AbkGuessrServer
                 int bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length);
                 string abkuerzung = Encoding.UTF8.GetString(buffer, 0, bytesRead).Trim();
 
+                string antwort;
                 if (dictionary.ContainsKey(abkuerzung))
-                {
-                    Console.WriteLine(dictionary[abkuerzung]);
-                }
+                    antwort = dictionary[abkuerzung];
                 else
-                {
-                    Console.WriteLine("Unbekannte Abkürzung");
-                }
+                    antwort = "Abkürzung nicht gefunden";
+
+                byte[] response = Encoding.UTF8.GetBytes(antwort);
+                await stream.WriteAsync(response, 0, response.Length);
             }
         }
     }
