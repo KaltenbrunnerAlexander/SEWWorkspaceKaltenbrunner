@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_17_Physarum_Simulation"
         mc:Ignorable="d"
-        Title="MainWindow" Height="840" Width="820">
+        Title="MainWindow" Height="840" Width="820"
+        Background="LightBlue">
     
     <Grid>
         <Image Name="Display"
