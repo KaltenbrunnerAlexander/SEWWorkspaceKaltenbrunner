@@ -22,7 +22,7 @@ namespace _18_MusicManager
     public partial class MainWindow : Window
     {
         List<MusicTitle> songList = new List<MusicTitle>();
-        List<Playlist> playlistList = new List<Playlist>();
+        List<Playlist> playList = new List<Playlist>();
 
         MediaPlayer player = new MediaPlayer();
 
@@ -63,71 +63,67 @@ namespace _18_MusicManager
             Playlist newList = new Playlist();
             newList.ListName = txtListName.Text;
 
-            playlistList.Add(newList);
-            listPlaylists.Items.Add(newList);
+            playList.Add(newList);
+            Playlists.Items.Add(newList);
 
             txtListName.Text = "";
         }
 
         private void DeleteList_Click(object sender, RoutedEventArgs e)
         {
-            if (listPlaylists.SelectedItem != null)
+            if (Playlists.SelectedItem != null)
             {
-                Playlist selectedList = (Playlist)listPlaylists.SelectedItem;
-                playlistList.Remove(selectedList);
-                listPlaylists.Items.Remove(selectedList);
-                listListSongs.Items.Clear();
+                Playlist selectedList = (Playlist)Playlists.SelectedItem;
+                playList.Remove(selectedList);
+                Playlists.Items.Remove(selectedList);
+                ListSongs.Items.Clear();
             }
         }
 
-        private void List_Selected(object sender,
-            System.Windows.Controls.SelectionChangedEventArgs e)
+        private void List_Selected(object sender, RoutedEventArgs e)
         {
-            listListSongs.Items.Clear();
+            ListSongs.Items.Clear();
 
-            if (listPlaylists.SelectedItem != null)
+            if (Playlists.SelectedItem != null)
             {
-                Playlist activeList = (Playlist)listPlaylists.SelectedItem;
+                Playlist activeList = (Playlist)Playlists.SelectedItem;
 
                 for (int i = 0; i < activeList.SongItems.Count; i++)
                 {
-                    listListSongs.Items.Add(activeList.SongItems[i]);
+                    ListSongs.Items.Add(activeList.SongItems[i]);
                 }
             }
         }
 
         private void AddToList_Click(object sender, RoutedEventArgs e)
         {
-            if (listPlaylists.SelectedItem != null &&
-                listSongs.SelectedItem != null)
+            if (Playlists.SelectedItem != null && listSongs.SelectedItem != null)
             {
-                Playlist activeList = (Playlist)listPlaylists.SelectedItem;
+                Playlist activeList = (Playlist)Playlists.SelectedItem;
                 MusicTitle selectedSong = (MusicTitle)listSongs.SelectedItem;
 
                 activeList.SongItems.Add(selectedSong);
-                listListSongs.Items.Add(selectedSong);
+                ListSongs.Items.Add(selectedSong);
             }
         }
-
+            
         private void RemoveFromList_Click(object sender, RoutedEventArgs e)
         {
-            if (listPlaylists.SelectedItem != null &&
-                listListSongs.SelectedItem != null)
+            if (Playlists.SelectedItem != null && ListSongs.SelectedItem != null)
             {
-                Playlist activeList = (Playlist)listPlaylists.SelectedItem;
-                MusicTitle selectedSong = (MusicTitle)listListSongs.SelectedItem;
+                Playlist activeList = (Playlist)Playlists.SelectedItem;
+                MusicTitle selectedSong = (MusicTitle)ListSongs.SelectedItem;
 
                 activeList.SongItems.Remove(selectedSong);
-                listListSongs.Items.Remove(selectedSong);
+                ListSongs.Items.Remove(selectedSong);
             }
         }
 
         private void PlaySong_Click(object sender, RoutedEventArgs e)
         {
-            if (listListSongs.SelectedItem != null)
+            if (ListSongs.SelectedItem != null)
             {
-                MusicTitle selectedSong =
-                    (MusicTitle)listListSongs.SelectedItem;
+                MusicTitle selectedSong = (MusicTitle)ListSongs.SelectedItem;
 
                 if (selectedSong.FilePath != "")
                 {

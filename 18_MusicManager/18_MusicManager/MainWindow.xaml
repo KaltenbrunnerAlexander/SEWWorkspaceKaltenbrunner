@@ -72,7 +72,7 @@
                     Background="#F4A6A6"
                     Click="DeleteList_Click"/>
 
-            <ListBox Name="listPlaylists"
+            <ListBox Name="Playlists"
                      Height="250"
                      Margin="0,5"
                      SelectionChanged="List_Selected"/>
@@ -102,7 +102,7 @@
                     Background="#87CEFA"
                     Click="PlaySong_Click"/>
 
-            <ListBox Name="listListSongs"
+            <ListBox Name="ListSongs"
                      Height="300"
                      Margin="0,5"/>
         </StackPanel>
