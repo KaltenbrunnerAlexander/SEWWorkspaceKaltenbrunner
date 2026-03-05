@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36804.6 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "19_ObserverePattern", "19_ObserverePattern\19_ObserverePattern.csproj", "{C5C7D534-AF32-43FE-A1D8-EC3622DAC420}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpEvents", "CSharpEvents\CSharpEvents.csproj", "{D362938D-C649-4ACE-BF8B-ECEFF21C7433}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextObservers", "TextObservers\TextObservers.csproj", "{3EAF08E2-6A20-442C-A467-CD2B1BC69E40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButtonCount", "ButtonCount\ButtonCount.csproj", "{05E0DCED-109B-4338-A8DB-FB9B335E8955}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5C7D534-AF32-43FE-A1D8-EC3622DAC420}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5C7D534-AF32-43FE-A1D8-EC3622DAC420}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5C7D534-AF32-43FE-A1D8-EC3622DAC420}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5C7D534-AF32-43FE-A1D8-EC3622DAC420}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D362938D-C649-4ACE-BF8B-ECEFF21C7433}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D362938D-C649-4ACE-BF8B-ECEFF21C7433}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D362938D-C649-4ACE-BF8B-ECEFF21C7433}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D362938D-C649-4ACE-BF8B-ECEFF21C7433}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EAF08E2-6A20-442C-A467-CD2B1BC69E40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EAF08E2-6A20-442C-A467-CD2B1BC69E40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EAF08E2-6A20-442C-A467-CD2B1BC69E40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EAF08E2-6A20-442C-A467-CD2B1BC69E40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05E0DCED-109B-4338-A8DB-FB9B335E8955}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05E0DCED-109B-4338-A8DB-FB9B335E8955}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05E0DCED-109B-4338-A8DB-FB9B335E8955}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05E0DCED-109B-4338-A8DB-FB9B335E8955}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CFF76DFF-A896-43EA-B357-31A5AE180582}
+	EndGlobalSection
+EndGlobal
