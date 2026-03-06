@@ -1,0 +1,42 @@
+﻿<Window x:Class="Staedteliste.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Staedteliste"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <Label FontSize="20" Background="LightBlue" Margin="0,0,0,20">Städteliste</Label>
+        
+        <Label>Name:</Label>
+        <TextBox Text="{Binding CurrentCity.SearchCity}"></TextBox>
+        
+        <Label>Land:</Label>
+        <TextBox Text="{Binding CurrentCity.Country}"></TextBox>
+        
+        <Label>Einwohnerzahl:</Label>
+        <TextBox Text="{Binding CurrentCity.Population}"></TextBox>
+        
+        <Label>Hauptstadt:</Label>
+        <TextBox Text="{Binding CurrentCity.CapitalCity}" IsReadOnly="True" FontWeight="Bold">
+            <TextBox.Style>
+                <Style TargetType="TextBox">
+                    <Setter Property="Foreground" Value="Red"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding CurrentCity.CapitalCity}" Value="True">
+                            <Setter Property="Foreground" Value="Green"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        
+
+        <Button Content="Nächste Stadt"
+                Command="{Binding NextCityCommand}"
+                Margin="0,20,0,0"
+                Height="30"/>
+        
+    </StackPanel>
+</Window>
