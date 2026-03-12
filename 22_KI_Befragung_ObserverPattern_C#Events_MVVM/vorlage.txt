@@ -1,0 +1,15 @@
+Meine Vorstellungen für folgende Konzepte sind:
+
+* Observer Pattern: Die Daten, die ich beobachte, wenn sie sich ändern
+
+* C# Events: Das ein Objekt einem anderen Objekt mitteilt, dass sich etwas geändert hat
+
+* MVVM: Sicht das man auf ein Model hat
+
+Bitte bewerte meine Erklärungen jeweils mit Punkten von 1 bis 10 (1 = Erklärung trifft nicht zu, 10 = Erklärung ist perfekt). Gib mir auch meine erreichte Gesamtpunktezahl.
+
+1. 6/10
+2. 8/10
+3. 6/10
+
+Gesamt: 20/30
