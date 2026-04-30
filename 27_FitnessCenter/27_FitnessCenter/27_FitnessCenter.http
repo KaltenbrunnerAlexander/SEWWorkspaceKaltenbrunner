@@ -1,0 +1,6 @@
+@_27_FitnessCenter_HostAddress = http://localhost:5144
+
+GET {{_27_FitnessCenter_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

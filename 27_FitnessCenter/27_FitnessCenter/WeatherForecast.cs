@@ -1,4 +1,4 @@
-namespace _26_CryptoPriceAPI
+namespace _27_FitnessCenter
 {
     public class WeatherForecast
     {
