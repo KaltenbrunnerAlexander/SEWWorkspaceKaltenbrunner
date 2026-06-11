@@ -1,0 +1,18 @@
+﻿@page
+@model RazorPagesMovie.Pages.sewModel
+@{
+}
+
+<h1>Software Entwicklung</h1>
+
+Die Seite haben wir in SEW erstellt.
+
+<p>
+    Ergebnis: @Model.Result
+</p>
+
+<form method="post">
+    <input asp-for="Number1" />
+    <input asp-for="Number2" />
+    <input type="submit" value="Submit" />
+</form>
