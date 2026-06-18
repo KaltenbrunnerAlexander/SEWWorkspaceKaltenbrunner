@@ -1,0 +1,44 @@
+@* NEU HINZUGEFÜGT (Aufgabe 2d): MovieClassifier Razor Page
+   Zeigt ein Formular zur Eingabe einer Film-Dauer und klassifiziert den Film server-seitig. *@
+@page
+@model RazorPagesMovie.Pages.MoviePages.MovieClassifierModel
+
+@{
+    ViewData["Title"] = "Movie Classifier";
+}
+
+<h1>Movie Classifier</h1>
+<p>Geben Sie die Dauer eines Movies in Minuten ein, um es zu klassifizieren.</p>
+
+<hr />
+
+@* AUFGABE 2d: Formular zur Eingabe der Filmdauer *@
+<form method="post">
+    <div class="form-group">
+        <label asp-for="DurationMinutes">Dauer (in Minuten):</label>
+        <input asp-for="DurationMinutes" class="form-control" type="number" min="0" style="width: 200px;" />
+        <span asp-validation-for="DurationMinutes" class="text-danger"></span>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Klassifizieren</button>
+</form>
+
+@* AUFGABE 2d: Ergebnis wird nur angezeigt, wenn eine Klassifizierung vorhanden ist *@
+@if (!string.IsNullOrEmpty(Model.Classification))
+{
+    <hr />
+    <div class="alert alert-info mt-3">
+        <h4>Ergebnis:</h4>
+        <p>
+            <strong>Dauer:</strong> @Model.DurationMinutes Minuten<br />
+            <strong>Klassifizierung:</strong> @Model.Classification
+        </p>
+    </div>
+}
+
+<br />
+<a asp-page="./Index">Zurück zur Übersicht</a>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

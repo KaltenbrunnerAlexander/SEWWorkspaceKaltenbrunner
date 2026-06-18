@@ -1,0 +1,18 @@
+﻿@page
+@model RazorPagesMovie.Pages.MoviePages.IndexModel
+@{
+    <h1>Action Movies</h1>
+    <table class="table">
+        @foreach (var movie in Model.Movie)
+        {
+            @if (movie.Genre != "Action")
+            {
+                continue;
+            };
+            <tr>
+                <td>@movie.Title</td>
+                <td>@movie.Genre</td>
+            </tr>
+        }
+    </table>
+}

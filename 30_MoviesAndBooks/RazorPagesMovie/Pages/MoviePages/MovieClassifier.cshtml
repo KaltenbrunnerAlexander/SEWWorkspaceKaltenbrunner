@@ -1,0 +1,15 @@
+﻿@page
+@model RazorPagesMovie.Pages.MoviePages.MovieClassifierModel
+@{
+    <h2>Movie Classifier</h2>
+
+    <form method="post">
+        <input asp-for="Duration" />
+        <button type="submit">Prüfen</button>
+    </form>
+
+    @if (!string.IsNullOrEmpty(Model.Result))
+    {
+        <h3>@Model.Result</h3>
+    }
+}

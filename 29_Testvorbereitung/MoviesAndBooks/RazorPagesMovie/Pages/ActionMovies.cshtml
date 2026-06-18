@@ -1,0 +1,22 @@
+﻿@page
+@model RazorPagesMovie.Pages.ActionMoviesModel
+
+<h1>Reine Action-Filme</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Titel</th>
+            <th>Genre</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.ActionMovies)
+        {
+            <tr>
+                <td>@item.Title</td>
+                <td>@item.Genre!!!</td>
+            </tr>
+        }
+    </tbody>
+</table>
